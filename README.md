@@ -1,2 +1,2 @@
 # Riesgo-Relativo
-En este proyecto se analizó el riesgo relativo en una base de datos de clientes de un banco, para la segmentación e identificación de psoibles buenos y malos pagadores.
+En este proyecto se analizó el riesgo relativo en una base de datos de clientes de un banco, para la segmentación e identificación de psoibles buenos y malos pagadores. El objetivo principal es mejorar la eficiencia y la precisión en la evaluación del riesgo crediticio, permitiendo al banco tomar decisiones informadas sobre la concesión de crédito y reducir el riesgo de préstamos no reembolsables.
