@@ -34,15 +34,21 @@ Este conjunto de tablas contiene información sobre préstamos concedidos a un g
 * user_ info	
 
 user_ id	Número de identificación del cliente (único para cada cliente)
+
 age	Edad del cliente
+
 sex	Sexo del cliente
+
 last_ month_ salary	Último salario mensual que el cliente reportó al banco
+
 number_dependents	Número de dependientes
 
 * loans_ outstanding	
 
 loan_ id	Número de identificación del préstamo (único para cada préstamo)
+
 user_ id	Número de identificación del cliente
+
 loan_ type	Tipo de préstamo (real estate = inmobiliario, others = otro)
 
 * loans_ detail
@@ -62,6 +68,7 @@ number_ times_ delayed_ payment_ loan_ 60_ 89_ days	Número de veces que el clie
 * default
 
 user_ id	Número de identificación del cliente
+
 default_ flag	Clasificación de los clientes morosos (1 para clientes que pagan mal, 0 para clientes que pagan bien)
 
 ## 4. Visualización y análisis de datos:
