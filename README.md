@@ -15,7 +15,7 @@
 ## 1. Contexto: 
 Una discográfica se enfrenta al emocionante desafío de lanzar un nuevo artista en el escenario musical global.
 ## 2. Objetivo:
-En este proyecto se analizó el riesgo relativo en una base de datos de clientes de un banco, para la segmentación e identificación de psoibles buenos y malos pagadores. El objetivo principal es mejorar la eficiencia y la precisión en la evaluación del riesgo crediticio, permitiendo al banco tomar decisiones informadas sobre la concesión de crédito y reducir el riesgo de préstamos no reembolsables.
+En este proyecto se analizó el riesgo relativo en una base de datos de clientes de un banco, para la segmentación e identificación de posibles buenos y malos pagadores. El objetivo principal es mejorar la eficiencia y la precisión en la evaluación del riesgo crediticio, permitiendo al banco tomar decisiones informadas sobre la concesión de crédito y reducir el riesgo de préstamos no reembolsables.
 ## 3. Metodología:
   ## 3.1 Procesamiento y preparación de datos:
 * 1. Herramientas:
