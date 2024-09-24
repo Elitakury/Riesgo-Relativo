@@ -82,8 +82,11 @@ default_ flag	Clasificación de los clientes morosos (1 para clientes que pagan 
 - Se identificaron valores inconsistentes en la variable categórica loan_type (mayúsculas y minúsculas mezcladas) de la tabla loans_outstanding. Se corrigieron estos valores utilizando LOWER y CASE para estandarizar las categorías.
 - Se cambiaron los formatos de user_id de INTEGER a STRING para evitar problemas en el proceso de unión de tablas.
 - Se utilizó la función CORR para evaluar la evaluación entre variables como:
+  
   > En more_90_days_overdue y number_times_delayed_paid_loan_30_59_days , number_times_delayed_paid_loan_60_89_days y se identificó una limitación alta entre ellas, por lo que se comparó la desviación estándar de cada una. Al ver poca diferencia se dejan las tres variables para el análisis.
+   
   > Variables Independientes: Se comprobó que deuda_ratio y more_90_days_overdue tenían una baja valoración, por lo que ambos se mantuvieron en el análisis, ya que proporcionaron información única.
+  
   > Decisión sobre variables: Solo se excluyó la variable género , esto debido a que no es un factor determinante del riesgo crediticio, y su uso puede generar sesgos discriminatorios.
 
 ## 4. Visualización de resultados:
