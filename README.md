@@ -206,7 +206,6 @@ SELECT
   u.user_id,
   u.age_limited,
   u.age_range,
-  -- Calcular cuartiles y etiquetas para la edad
   NTILE(4) OVER (ORDER BY u.age_limited) AS age_quartile,
   CASE
     WHEN NTILE(4) OVER (ORDER BY u.age_limited) = 1 THEN 'Edad de 21 a 42'
@@ -217,19 +216,16 @@ SELECT
   u.last_month_salary_clean,
   u.number_dependents_clean,
   u.default_flag,
-  -- Calcular cuartiles y etiquetas para préstamos
   NTILE(4) OVER (ORDER BY o.total_loans) AS loans_quartile,
   CASE
     WHEN NTILE(4) OVER (ORDER BY o.total_loans) IN (1, 2) THEN 'Pocos préstamos'
     WHEN NTILE(4) OVER (ORDER BY o.total_loans) IN (3, 4) THEN 'Muchos préstamos'
   END AS loans_label,
-  -- Calcular cuartiles y etiquetas para mora
   NTILE(4) OVER (ORDER BY ld.more_90_days_overdue) AS overdue_quartile,
   CASE
     WHEN NTILE(4) OVER (ORDER BY ld.more_90_days_overdue) IN (1, 2, 3) THEN 'Clientes sin mora'
     WHEN NTILE(4) OVER (ORDER BY ld.more_90_days_overdue) = 4 THEN 'Clientes con mora'
   END AS overdue_label,
-  -- Asignar el estado de pagador
   CASE
     WHEN u.default_flag = 1 THEN 'De riesgo'
     ELSE 'Confiable'
@@ -305,24 +301,19 @@ En este análisis, se calculó el riesgo relativo para cada grupo de clientes (c
 
 > Consulta de riesgo relativo
 ``` sql
--- Paso 1: Crear una tabla temporal
 WITH tabla_temporal AS (
   SELECT
     total_loans,
     default_flag
   FROM
-    `riesgo-relativo3.dataset.consolidado`
-),
--- Paso 2: Calcular los cuartiles por variable
+    `riesgo-relativo3.dataset.consolidado`),
 quartiles AS (
   SELECT
      total_loans,
     default_flag,
     NTILE(4) OVER (ORDER BY  total_loans) AS num_quartile
   FROM
-    tabla_temporal
-),
--- Paso 3: Calcular el total de malos y buenos pagadores por cuartil
+    tabla_temporal),
 quartile_risk AS (
   SELECT
     num_quartile,
@@ -332,9 +323,7 @@ quartile_risk AS (
   FROM
     quartiles
   GROUP BY
-    num_quartile
-),
--- Paso 4: Obtener el rango mínimo y máximo por cuartil
+    num_quartile),
 quartile_ranges AS (
   SELECT
     num_quartile,
@@ -343,9 +332,7 @@ quartile_ranges AS (
   FROM
     quartiles
   GROUP BY
-    num_quartile
-),
--- Paso 5: Calcular el riesgo relativo
+    num_quartile),
 risk_relative AS (
   SELECT
     q.num_quartile,
@@ -363,9 +350,7 @@ risk_relative AS (
   JOIN
     quartile_ranges r
   ON
-    q.num_quartile = r.num_quartile
-)
--- Selecciona los resultados finales
+    q.num_quartile = r.num_quartile)
 SELECT * FROM risk_relative
 ORDER BY num_quartile; ```
 
