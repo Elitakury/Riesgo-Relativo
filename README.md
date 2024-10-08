@@ -138,9 +138,9 @@ FROM
 ```
 * Identificación y Tratamiento de valores atípicos: se utilizaron gráficos como histogramas y diagramas de caja (boxplots) en Looker Studio para identificar valores atípicos en variables clave como último_mes_salario y edad .
 
-![imagen1.png](Imagenes/imagen1.png)
+![imagen1.png](imágenes/imagen1.png)
 
-![imagen2.png](Imagenes/imagen2.png)
+![imagen2.png](imágenes/imagen2.png)
 
 * Se aplicó la técnica estadística de winsorización, utilizando los percentiles P2 y P99 para reducir el impacto de los outliers sin eliminarlos. Se imputaron los valores extremos con los valores en estos percentiles, manteniendo así la representatividad de los datos cercanos a los extremos.
 Pasos realizados:
@@ -275,12 +275,12 @@ ORDER BY
 * Datos categóricos:
 Se utilizaron tablas en Looker Studio para resumir y visualizar datos categóricos como age_range (rango de edad) y cat_debt_ratio (categorías de ratio de deuda).
 
-![imagen3.png](Imagenes/imagen3.png)
+![imagen3.png](imágenes/imagen3.png)
 
 * Cálculo de estadísticas descriptivas:
 Se emplearon tablas dinámicas para calcular estadísticas descriptivas que facilitaran la comprensión de la distribución de los datos. Esto incluye medidas de tendencia central y dispersión para las variables categóricas.
 
-![imagen4.png](Imagenes/imagen4.png)
+![imagen4.png](imágenes/imagen4.png)
 
 * Incorporación de nuevas categorías:
 
@@ -380,19 +380,19 @@ ORDER BY num_quartile;
 ´´´
 > riesgo relativo para la variable edad
 
-![imagen5.png](Imagenes/imagen.png)
+![imagen5.png](imágenes/imagen.png)
 
 > riesgo relativo para la variable total préstamos
 
-![imagen6.png](Imagenes/imagen6.png)
+![imagen6.png](imágenes/imagen6.png)
 
 > riesgo relativo para la variable more 90 días
 
-![imagen7.png](Imagenes/imagen7.png)
+![imagen7.png](imágenes/imagen7.png)
 
 * Creación de Dashboard en looker studio
 
-![imagen8.png](Imagenes/imagen8.png)
+![imagen8.png](imágenes/imagen8.png)
 
 ## 5. Conclusiones:
 * Comprobación de hipótesis
