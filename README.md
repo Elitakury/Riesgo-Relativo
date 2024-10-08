@@ -13,7 +13,9 @@
 - [6. Enlaces de interés](#enlaces-de-interés)
 
 ## 1. Contexto: 
-Una discográfica se enfrenta al emocionante desafío de lanzar un nuevo artista en el escenario musical global.
+
+La disminución de las tasas de interés en el mercado ha desencadenado un aumento notable en la demanda de solicitudes de crédito, lo que ha llevado a una afluencia de solicitudes de préstamo en el banco “Super Caja”. El banco está enfocando sus esfuerzos en automatizar y mejorar la eficiencia en la identificación y mitigación de estos riesgos, asegurando un equilibrio entre crecimiento y seguridad financiera.
+
 ## 2. Objetivo:
 En este proyecto se analizó el riesgo relativo en una base de datos de clientes de un banco, para la segmentación e identificación de posibles buenos y malos pagadores. El objetivo principal es mejorar la eficiencia y la precisión en la evaluación del riesgo crediticio, permitiendo al banco tomar decisiones informadas sobre la concesión de crédito y reducir el riesgo de préstamos no reembolsables.
 ## 3. Metodología:
