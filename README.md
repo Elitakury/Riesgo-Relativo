@@ -256,7 +256,8 @@ INNER JOIN
 WHERE
   u.user_id != '21979'
 ORDER BY
-  u.user_id; ```
+  u.user_id;
+```
 
 ## 4. Visualización de resultados:
 
@@ -353,7 +354,8 @@ risk_relative AS (
   ON
     q.num_quartile = r.num_quartile)
 SELECT * FROM risk_relative
-ORDER BY num_quartile; ```
+ORDER BY num_quartile;
+```
 
 * riesgo relativo para la variable edad
 
