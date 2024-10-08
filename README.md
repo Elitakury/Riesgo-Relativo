@@ -369,7 +369,7 @@ ORDER BY num_quartile;
 
 * Creación de Dashboard en looker studio
 
-![imagen8.png](imágenes/imagen8.png)
+![imagen8.jpg](imágenes/imagen8.jpg)
 
 
 ## 5. Conclusiones:
