@@ -274,12 +274,10 @@ ORDER BY
 
 * Datos categóricos:
 Se utilizaron tablas en Looker Studio para resumir y visualizar datos categóricos como age_range (rango de edad) y cat_debt_ratio (categorías de ratio de deuda).
-
 ![imagen3.png](imágenes/imagen3.png)
 
 * Cálculo de estadísticas descriptivas:
 Se emplearon tablas dinámicas para calcular estadísticas descriptivas que facilitaran la comprensión de la distribución de los datos. Esto incluye medidas de tendencia central y dispersión para las variables categóricas.
-
 ![imagen4.png](imágenes/imagen4.png)
 
 * Incorporación de nuevas categorías:
