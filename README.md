@@ -383,9 +383,13 @@ ORDER BY num_quartile;
 ## 6. Recomendaciones:
 
 > Implementar políticas de evaluación crediticia más estrictas para clientes más jóvenes, como mayores requisitos de ingresos o avales adicionales.
+
 > Ofrecer productos específicos, como créditos con plazos más cortos o montos menores, para mitigar el riesgo.
-> Mantener una política de préstamos flexible para personas con múltiples préstamos, siempre que se mantengan al día en sus pagos. 
+
+> Mantener una política de préstamos flexible para personas con múltiples préstamos, siempre que se mantengan al día en sus pagos.
+
 > Implementar programas de reestructuración de deuda o refinanciamiento, esto ayudaría a evitar que caigan en mora prolongada.
+
 
 ## 7. Enlaces de interés:
 Dashboard en looker studio
