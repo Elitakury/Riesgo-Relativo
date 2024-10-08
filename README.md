@@ -200,8 +200,8 @@ SELECT
   IFNULL(number_dependents, 0) AS number_dependents_clean,
   default_flag
 FROM
-  winsorized_data; ´´´
-
+  winsorized_data;
+```
 * Creación de Nuevas Variables:
 
 > Se generaron nuevas variables para agrupar los préstamos por cliente (user_id), incluyendo total_loans , real_state_loans y other_loans .
@@ -269,7 +269,7 @@ INNER JOIN
 WHERE
   u.user_id != '21979'
 ORDER BY
-  u.user_id; ´´´
+  u.user_id; ```
 
 ## 4. Visualización de resultados:
 
@@ -305,7 +305,7 @@ SELECT
     END AS salary_category
 FROM 
     salary_groups AS sg
-´´´
+```
 
 * ANALISIS DE RIESGO RELATIVO
 El riesgo relativo se calcula comparando la tasa de incidencia de un evento en un grupo expuesto a un factor de interés con la tasa de incidencia en un grupo no expuesto. En este caso, el objetivo es medir la probabilidad de que ocurra un evento (por ejemplo, el incumplimiento de pago) en los diferentes segmentos de clientes. 
@@ -376,7 +376,7 @@ risk_relative AS (
 )
 -- Selecciona los resultados finales
 SELECT * FROM risk_relative
-ORDER BY num_quartile; ´´´
+ORDER BY num_quartile; ```
 
 > riesgo relativo para la variable edad
 
