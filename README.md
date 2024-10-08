@@ -94,7 +94,6 @@ SELECT
     CORR(more_90_days_overdue, number_times_delayed_payment_loan_30_59_days) AS prueba_correlacion
 FROM `riesgo-relativo3.dataset.loans_detail`;
 --- 0.982916 alta correlación 
--- Calcular la correlación entre todas las combinaciones de variables en la tabla loans_detail
 SELECT 
     CORR(more_90_days_overdue, number_times_delayed_payment_loan_60_89_days) AS corr_90_60_89,
     CORR(more_90_days_overdue, debt_ratio) AS corr_90_debt_ratio,
@@ -102,8 +101,6 @@ SELECT
     CORR(number_times_delayed_payment_loan_30_59_days, number_times_delayed_payment_loan_60_89_days) AS corr_30_59_60_89,
     CORR(debt_ratio, using_lines_not_secured_personal_assets) AS corr_debt_ratio_unsecured_lines
 FROM `riesgo-relativo3.dataset.loans_detail`;
-
---- Calcular la desviación estandar de cada variable para decidir si excluir o no la variable con menos desviación.
 -- Desviación estándar para la variable more_90_days_overdue
 SELECT 
     STDDEV_POP(more_90_days_overdue) AS stddev_pop_more_90_days_overdue,
@@ -111,19 +108,15 @@ SELECT
     STDDEV(more_90_days_overdue) AS stddev_simple_more_90_days_overdue,
 FROM 
     `riesgo-relativo3.dataset.loans_detail`;
-
--- Desviación estándar para la variable using_lines_not_secured_personal_assets
 SELECT
     STDDEV_SAMP(using_lines_not_secured_personal_assets)
 FROM 
     `riesgo-relativo3.dataset.loans_detail`;   
-
 -- Desviación estándar para la variable number_times_delayed_payment_loan_30_59_days
 SELECT
     STDDEV_SAMP(number_times_delayed_payment_loan_30_59_days)
 FROM 
     `riesgo-relativo3.dataset.loans_detail`;    
-
 -- Desviación estándar para la variable debt_ratio
 SELECT
     STDDEV_SAMP(debt_ratio),
@@ -158,8 +151,7 @@ WITH percentiles AS (
   FROM
     `riesgo-relativo3.dataset.user_info`
   WHERE
-    last_month_salary IS NOT NULL
-),
+    last_month_salary IS NOT NULL),
 winsorized_data AS (
   SELECT
     CAST(a.user_id AS STRING) AS user_id,  
@@ -186,9 +178,7 @@ winsorized_data AS (
     `riesgo-relativo3.dataset.default` AS b
   ON
     a.user_id = b.user_id,
-  (SELECT DISTINCT S_P2, S_P99 FROM percentiles) AS p
-)
-
+  (SELECT DISTINCT S_P2, S_P99 FROM percentiles) AS p)
 SELECT
   user_id, 
   CASE 
@@ -210,6 +200,7 @@ FROM
 
 Se unieron las tres tablas limpias ( user_default_view , loutstanding_view , ldetail_view ) mediante un INNER JOIN, dicha unión resultó en la exclusión de aproximadamente 425 registros que presentaban valores inconsistentes.
 El proceso de unión resultó en una tabla consolidada con un total de 35,574 registros.
+
 ``` sql
 SELECT
   u.user_id,
