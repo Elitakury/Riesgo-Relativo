@@ -271,6 +271,7 @@ Se emplearon tablas dinámicas para calcular estadísticas descriptivas que faci
 * Incorporación de nuevas categorías:
 
 Las categorías derivadas de los cuartiles fueron agregadas al conjunto de datos principal, permitiendo un análisis más detallado de los segmentos de clientes.
+
 ``` sql
 WITH salary_groups AS (
     SELECT 
@@ -278,8 +279,7 @@ WITH salary_groups AS (
         last_month_salary_clean,
         NTILE(4) OVER (ORDER BY last_month_salary_clean) AS salary_quartile
     FROM 
-        `riesgo-relativo3.dataset.user_default`
-)
+        `riesgo-relativo3.dataset.user_default`)
 SELECT 
     sg.user_id,
     sg.last_month_salary_clean,
@@ -299,7 +299,8 @@ El riesgo relativo se calcula comparando la tasa de incidencia de un evento en u
 
 En este análisis, se calculó el riesgo relativo para cada grupo de clientes (clasificados como mal pagador o bueno pagador) en función de diversas variables clave, utilizando la variable default_flag como indicador de comportamiento de pago. Este enfoque permite identificar qué variables están más asociadas con un mayor riesgo de incumplimiento y en qué segmentos es más probable que ocurra.
 
-> Consulta de riesgo relativo
+* Consulta de riesgo relativo
+
 ``` sql
 WITH tabla_temporal AS (
   SELECT
@@ -354,15 +355,15 @@ risk_relative AS (
 SELECT * FROM risk_relative
 ORDER BY num_quartile; ```
 
-> riesgo relativo para la variable edad
+* riesgo relativo para la variable edad
 
 ![imagen5.png](imágenes/imagen5.png)
 
-> riesgo relativo para la variable total préstamos
+*  riesgo relativo para la variable total préstamos
 
 ![imagen6.png](imágenes/imagen6.png)
 
-> riesgo relativo para la variable more 90 días
+* riesgo relativo para la variable more 90 días
 
 ![imagen7.png](imágenes/imagen7.png)
 
