@@ -294,7 +294,6 @@ SELECT
 FROM 
     salary_groups AS sg
 ```
-
 * ANALISIS DE RIESGO RELATIVO
 El riesgo relativo se calcula comparando la tasa de incidencia de un evento en un grupo expuesto a un factor de interés con la tasa de incidencia en un grupo no expuesto. En este caso, el objetivo es medir la probabilidad de que ocurra un evento (por ejemplo, el incumplimiento de pago) en los diferentes segmentos de clientes. 
 
@@ -356,7 +355,6 @@ risk_relative AS (
 SELECT * FROM risk_relative
 ORDER BY num_quartile;
 ```
-
 * riesgo relativo para la variable edad
 
 ![imagen5.png](imágenes/imagen5.png)
@@ -372,6 +370,7 @@ ORDER BY num_quartile;
 * Creación de Dashboard en looker studio
 
 ![imagen8.png](imágenes/imagen8.png)
+
 
 ## 5. Conclusiones:
 * Comprobación de hipótesis
