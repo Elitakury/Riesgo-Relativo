@@ -380,7 +380,7 @@ ORDER BY num_quartile;
 ´´´
 > riesgo relativo para la variable edad
 
-![imagen5.png](imágenes/imagen.png)
+![imagen5.png](imágenes/imagen5.png)
 
 > riesgo relativo para la variable total préstamos
 
