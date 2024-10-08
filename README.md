@@ -139,7 +139,9 @@ FROM
 * Identificación y Tratamiento de valores atípicos: se utilizaron gráficos como histogramas y diagramas de caja (boxplots) en Looker Studio para identificar valores atípicos en variables clave como último_mes_salario y edad .
 
 ![imagen1.png](Imagenes/imagen1.png)
+
 ![imagen2.png](Imagenes/imagen2.png)
+
 * Se aplicó la técnica estadística de winsorización, utilizando los percentiles P2 y P99 para reducir el impacto de los outliers sin eliminarlos. Se imputaron los valores extremos con los valores en estos percentiles, manteniendo así la representatividad de los datos cercanos a los extremos.
 Pasos realizados:
  > Calcular percentiles P2 y P99 para last_month_salary .
